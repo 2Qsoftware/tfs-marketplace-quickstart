@@ -29,11 +29,11 @@ Modern AI training and high-throughput inference clusters routinely suffer from 
 
 TFS Tri-Engine Suite operates transparently across three physical bottlenecks in containerized AI infrastructure while remaining 100% isolated inside the customer's Amazon VPC:
 
-| Acceleration Tier | Infrastructure Target | Verified External Impact |
-| :--- | :--- | :--- |
+| Acceleration Tier          | Infrastructure Target                                       | Verified External Impact                                                                                          |
+| :---                       | :---                                                        | :--- |
 | **Control-Plane IPC Tier** | Host CPU & Container Runtime (`linux/amd64`, `linux/arm64`) | **`~28 µs` deterministic C-ABI IPC** (`35,000+ ops/sec`, **>95% latency reduction** vs. millisecond TCP/gRPC serialization) |
-| **GPU Memory Tier** | NVIDIA GPU Compute (Hopper, Blackwell, Vera Rubin) | **Up to `4.0x` effective HBM payload expansion**, enabling larger batch sizes and models without adding GPU nodes |
-| **DPU Interconnect Tier** | NVIDIA BlueField-3 DPU (`DOCA 3.5+`) | **Up to `72.73%` PCIe bus traffic reduction** (`8.5+ GB/s` line-rate offload), freeing host CPU cycles |
+| **GPU Memory Tier**        | NVIDIA GPU Compute (Hopper, Blackwell, Vera Rubin)          | **Up to `4.0x` effective HBM payload expansion**, enabling larger batch sizes and models without adding GPU nodes |
+| **DPU Interconnect Tier**  | NVIDIA BlueField-3 DPU (`DOCA 3.5+`)                        | **Up to `72.73%` PCIe bus traffic reduction** (`8.5+ GB/s` line-rate offload), freeing host CPU cycles            |
 
 ---
 
